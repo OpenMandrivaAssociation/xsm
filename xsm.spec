@@ -51,6 +51,6 @@ rm -rf %{buildroot}
 %{_bindir}/xsm
 %{_libdir}/X11/xsm/system.xsm
 %{_datadir}/X11/app-defaults/XSm
-%{_mandir}/man1/xsm.1x.bz2
+%{_mandir}/man1/xsm.1x*
 
 
