@@ -1,6 +1,6 @@
 Name: xsm
 Version: 1.0.1
-Release: %mkrel 4
+Release: %mkrel 5
 Summary: X Session Manager
 Group: Development/X11
 Source: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
@@ -34,6 +34,7 @@ their state.
 %setup -q -n %{name}-%{version}
 
 %build
+autoreconf -ifs
 %configure2_5x	--x-includes=%{_includedir}\
 		--x-libraries=%{_libdir}
 
