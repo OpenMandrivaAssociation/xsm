@@ -5,7 +5,6 @@ Summary: X Session Manager
 Group: Development/X11
 Source: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
 License: MIT
-BuildRoot: %{_tmppath}/%{name}-root
 
 BuildRequires: libxaw-devel >= 1.0.1
 BuildRequires: libxt-devel >= 1.0.0
