@@ -4,23 +4,14 @@ Release: %mkrel 5
 Summary: X Session Manager
 Group: Development/X11
 URL: http://xorg.freedesktop.org
-# Note local xsm-1.0.1@mandriva suggested on upstream
-# Tag at git checkout adf6777c5c34ca156d77f31af3ab3dec744c109f
-########################################################################
-# git clone git://git.mandriva.com/people/pcpa/xorg/app/xsm xorg/app/xsm
-# cd xorg/app/xsm
-# git-archive --format=tar --prefix=xsm-1.0.1/ xsm-1.0.1@mandriva | bzip2 -9 > xsm-1.0.1.tar.bz2
-Source: %{name}-%{version}.tar.bz2
+Source: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
 License: MIT
-########################################################################
-# git-format-patch xsm-1.0.1@mandriva..origin/mandriva
-Patch1: 0001-Remove-build-dependency-on-rsh-or-similar-program.patch
-########################################################################
-
 BuildRoot: %{_tmppath}/%{name}-root
+BuildRequires: libxaw-devel >= 1.0.1
+BuildRequires: libxt-devel >= 1.0.0
+BuildRequires: x11-util-macros >= 1.0.1
 
-BuildRequires: x11-util-macros	>= 1.1.5
-BuildRequires: libxaw-devel	>= 1.0.4
+Patch1: 0001-Remove-build-dependency-on-rsh-or-similar-program.patch
 
 %description
 Xsm is a session manager. A session is a group of applications, each of which
@@ -47,7 +38,7 @@ their state.
 
 %build
 autoreconf -ifs
-%configure	--x-includes=%{_includedir}\
+%configure2_5x	--x-includes=%{_includedir}\
 		--x-libraries=%{_libdir}
 
 %make
