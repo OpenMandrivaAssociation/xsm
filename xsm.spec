@@ -10,6 +10,7 @@ BuildRoot: %{_tmppath}/%{name}-root
 BuildRequires: libxaw-devel >= 1.0.1
 BuildRequires: libxt-devel >= 1.0.0
 BuildRequires: x11-util-macros >= 1.0.1
+BuildRequires: rsh
 
 Patch1: 0001-Remove-build-dependency-on-rsh-or-similar-program.patch
 
