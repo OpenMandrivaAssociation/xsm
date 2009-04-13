@@ -33,14 +33,10 @@ their state.
 
 %prep
 %setup -q -n %{name}-%{version}
-
 %patch1 -p1
 
 %build
-autoreconf -ifs
-%configure2_5x	--x-includes=%{_includedir}\
-		--x-libraries=%{_libdir}
-
+%configure2_5x
 %make
 
 %install
