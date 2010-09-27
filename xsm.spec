@@ -1,6 +1,6 @@
 Name: xsm
-Version: 1.0.1
-Release: %mkrel 8
+Version: 1.0.2
+Release: %mkrel 9
 Summary: X Session Manager
 Group: Development/X11
 URL: http://xorg.freedesktop.org
