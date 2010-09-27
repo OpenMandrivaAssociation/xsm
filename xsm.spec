@@ -12,8 +12,6 @@ BuildRequires: libxt-devel >= 1.0.0
 BuildRequires: x11-util-macros >= 1.0.1
 BuildRequires: rsh
 
-Patch1: 0001-Remove-build-dependency-on-rsh-or-similar-program.patch
-
 %description
 Xsm is a session manager. A session is a group of applications, each of which
 has a particular state. xsm allows you to create arbitrary sessions - for
@@ -34,7 +32,6 @@ their state.
 
 %prep
 %setup -q -n %{name}-%{version}
-%patch1 -p1
 
 %build
 %configure2_5x
