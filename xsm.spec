@@ -1,14 +1,13 @@
 Name: xsm
-Version: 1.0.2
-Release: %mkrel 10
+Version: 1.0.3
+Release: 1
 Summary: X Session Manager
 Group: Development/X11
 URL: http://xorg.freedesktop.org
-Source: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
+Source0: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
 License: MIT
-BuildRoot: %{_tmppath}/%{name}-root
-BuildRequires: libxaw-devel >= 1.0.1
-BuildRequires: libxt-devel >= 1.0.0
+BuildRequires: pkgconfig(xaw7)
+BuildRequires: pkgconfig(xt)
 BuildRequires: x11-util-macros >= 1.0.1
 BuildRequires: netkit-rsh
 
@@ -38,16 +37,11 @@ their state.
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %{_bindir}/xsm
-%{_libdir}/X11/xsm/system.xsm
+%{_sysconfdir}/X11/xsm/system.xsm
 %{_datadir}/X11/app-defaults/XSm
 %{_mandir}/man1/xsm.1*
 
