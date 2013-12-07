@@ -1,6 +1,6 @@
 Name: xsm
 Version: 1.0.3
-Release: 3
+Release: 4
 Summary: X Session Manager
 Group: Development/X11
 URL: http://xorg.freedesktop.org
