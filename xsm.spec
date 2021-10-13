@@ -1,6 +1,6 @@
 Name: xsm
 Version: 1.0.4
-Release: 2
+Release: 3
 Summary: X Session Manager
 Group: Development/X11
 URL: http://xorg.freedesktop.org
@@ -9,7 +9,7 @@ License: MIT
 BuildRequires: pkgconfig(xaw7)
 BuildRequires: pkgconfig(xt)
 BuildRequires: x11-util-macros >= 1.0.1
-BuildRequires: netkit-rsh
+#BuildRequires: netkit-rsh
 
 %description
 Xsm is a session manager. A session is a group of applications, each of which
@@ -33,11 +33,11 @@ their state.
 %setup -q -n %{name}-%{version}
 
 %build
-%configure2_5x
-%make
+%configure
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %{_bindir}/xsm
