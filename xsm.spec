@@ -3,7 +3,7 @@ Version: 1.0.6
 Release: 1
 Summary: X Session Manager
 Group: Development/X11
-URL: http://xorg.freedesktop.org
+URL: https://xorg.freedesktop.org
 Source0: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.xz
 License: MIT
 BuildRequires: pkgconfig(xaw7)
